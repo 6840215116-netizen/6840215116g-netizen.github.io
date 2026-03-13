@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>โปรไฟล์</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="box">
+        <h3>Play: กดปุ่ม</h3>
+        <button onclick="showWelcome()">แสดงข้อความต้อนรับ</button>
+    </div>
+
+    <div class="box">
+        <h3>ป้อนชื่อ: ทักทายตามชื่อ</h3>
+        <input type="text" id="userName" placeholder="กรอกชื่อของคุณที่นี่">
+        <button onclick="greetUser()">ทักทาย</button>
+        <p id="displayArea"></p> </div>
+
+    <script>
+        // ฟังก์ชันที่ 1: แสดง alert
+        function showWelcome() {
+            alert("ยินดีต้อนรับสู่เว็บไซต์ของฉัน!");
+        }
+
+        // ฟังก์ชันที่ 2: ดึงค่าจาก Input มาแสดงผล
+        function greetUser() {
+            const name = document.getElementById("userName").value; // ดึงค่าจากช่อง Input
+            const display = document.getElementById("displayArea"); // เลือกพื้นที่แสดงผล
+            
+            if (name.trim() !== "") {
+                display.innerText = "สวัสดีคุณ " + name + " ยินดีต้อนรับครับ/ค่ะ!";
+            } else {
+                display.innerText = "กรุณากรอกชื่อก่อนกดปุ่มนะครับ";
+                display.style.color = "red";
+            }
+        }
+    </script>
+      <center><h1 class="title">โปรไฟล์</h1></center>
+  <center><img src="https://uploads.onecompiler.io/44g6tctfs/44g6t96t4/111.jpg" alt="My Photo"width="400" height="400"></center> 
+  <center><p>บุคคลปริศนาไม่ทราบชื่อ?</p></center>
+  <ol>
+    <li>English</li>
+    <li>Thai</li>
+    <li>Japan</li>
+  </ol>
+  
+  <a href="https://millenniumforum.co.uk/whats-on/the-magic-of-michael-jackson" target="_blank">
+            เยี่ยมชมเว็บไซต์ของฉัน
+        </a>
+  </body>
+  </html>
